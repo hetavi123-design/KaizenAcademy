@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kaizen Academy – Academic Center</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem;}
+.pillar{display:flex;gap:.9rem;align-items:flex-start;padding:1.1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);}
+.pillar .p-icon{font-size:1.4rem;flex-shrink:0;}
+.pillar h4{color:var(--gold-light);font-size:.88rem;margin-bottom:.15rem;}
+.pillar p{font-size:.8rem;color:rgba(255,255,255,.65);}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2.5rem;}.pillar-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb" style="width:600px;height:600px;top:-150px;right:-150px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:400px;height:400px;bottom:-100px;left:-100px;background:radial-gradient(circle,rgba(45,107,196,.15) 0%,transparent 70%);animation-delay:3s;"></div>
+  <div class="geo-shape" style="width:300px;height:300px;top:10%;right:5%;animation-duration:40s;"></div>
+  <div class="geo-shape" style="width:180px;height:180px;top:20%;right:12%;animation-duration:28s;animation-direction:reverse;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap">
+    <div class="hero-left">
+      <div class="hero-badge">✦ Academic Center for Grades 7–10</div>
+      <h1 class="hero-title">Where Every Grade Becomes a <span class="gold-text">Gateway to Success</span></h1>
+      <p class="hero-desc">Kaizen Academy offers comprehensive coaching across SSC, ICSE, CBSE and IGCSE boards — with dedicated batches, expert faculty, and a culture of continuous growth.</p>
+      <div class="hero-actions">
+        <a href="#batches" class="btn btn-gold btn-lg">Explore Batches</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Enrol Now →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-grid">
+        <div class="mini-card"><div class="icon">📚</div><h4>All Boards</h4><p>SSC · ICSE · CBSE · IGCSE</p></div>
+        <div class="mini-card"><div class="icon">🎯</div><h4>Grades 7–10</h4><p>Structured learning paths</p></div>
+        <div class="mini-card"><div class="icon">🏆</div><h4>3 Unique Batches</h4><p>Sarthi · Apex · Ikigai</p></div>
+        <div class="mini-card"><div class="icon">📖</div><h4>All Subjects</h4><p>Science · Math · Languages</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="reveal">
+      <div class="stat-num" data-target="500" data-suffix="+">500+</div>
+      <div class="stat-lbl">Happy Students</div>
+    </div>
+    <div class="reveal d1">
+      <div class="stat-num" data-target="10" data-suffix="+">10+</div>
+      <div class="stat-lbl">Years of Excellence</div>
+    </div>
+    <div class="reveal d2">
+      <div class="stat-num" data-target="4" data-suffix="">4</div>
+      <div class="stat-lbl">Boards Covered</div>
+    </div>
+    <div class="reveal d3">
+      <div class="stat-num" data-target="98" data-suffix="%">98%</div>
+      <div class="stat-lbl">Result Rate</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section bg-deep">
+  <div class="container">
+    <div class="about-grid">
