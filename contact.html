@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact &amp; Enquiries – Kaizen Academy</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.enquiry-card{background:var(--blue-pale);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;margin-bottom:1rem;transition:all .3s var(--ease);display:flex;gap:1rem;align-items:flex-start;}
+.enquiry-card:hover{background:var(--white);box-shadow:0 6px 24px var(--shadow-hover);transform:translateX(4px);}
+.eq-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.eq-icon.blue{background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));}
+.enquiry-card h4{color:var(--blue-deep);font-size:.88rem;margin-bottom:.2rem;font-family:'Poppins',sans-serif;}
+.enquiry-card p{font-size:.83rem;}
+.enquiry-card a{color:var(--blue-mid);font-weight:600;text-decoration:none;}
+.enquiry-card a:hover{color:var(--gold);}
+.map-placeholder{background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));border-radius:var(--radius-lg);height:220px;display:flex;align-items:center;justify-content:center;color:white;text-align:center;margin-top:1.5rem;}
+.prog-select{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem;}
+.prog-btn{background:var(--off-white);border:1.5px solid var(--border);border-radius:100px;padding:.35rem .9rem;font-size:.78rem;font-weight:600;color:var(--text-mid);cursor:pointer;transition:all .25s;font-family:'Poppins',sans-serif;}
+.prog-btn:hover,.prog-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--blue-dark);border-color:var(--gold);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;cursor:pointer;font-weight:600;color:var(--blue-deep);font-size:.95rem;gap:1rem;}
+.faq-q span{color:var(--gold);flex-shrink:0;font-size:1.2rem;transition:transform .3s;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+.faq-a.open{max-height:200px;padding-bottom:1rem;}
+.faq-a p{font-size:.88rem;color:var(--text-mid);}
+.faq-item.open .faq-q span{transform:rotate(45deg);}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html" class="active">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="min-height:55vh;">
+  <div class="hero-bg"></div>
+  <div class="hero-orb" style="width:480px;height:480px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(201,162,39,.12) 0%,transparent 70%);"></div>
+  <div class="geo-shape" style="width:260px;height:260px;bottom:8%;left:5%;animation-duration:38s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;padding:3rem 1.5rem;">
+    <div class="hero-left" style="max-width:640px;">
+      <div class="hero-badge">📞 We're Here to Help</div>
+      <h1 class="hero-title">Get in <span class="gold-text">Touch</span> With Us</h1>
+      <p class="hero-desc">Have a question about our programmes, batches, or enrolment process? Fill in the inquiry form below or reach out directly — our team is always happy to help.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT GRID -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info Side -->
+      <div class="reveal">
+        <div class="section-label">Reach Us</div>
+        <div class="gold-divider"></div>
+        <h2 class="section-title" style="font-size:1.8rem;margin-bottom:1.5rem;">Always <span class="accent">Available</span> for You</h2>
+
+        <div class="enquiry-card">
+          <div class="eq-icon blue">📍</div>
+          <div>
+            <h4>Visit Us</h4>
+            <p>Kaizen Academy, [Your Full Address Here],<br/>City, State – PIN Code</p>
+          </div>
+        </div>
+
+        <div class="enquiry-card">
+          <div class="eq-icon blue">📞</div>
+          <div>
+            <h4>Call Us</h4>
+            <p><a href="tel:+919999999999">+91 99999 99999</a><br/>Mon–Sat, 9:00 AM – 7:00 PM</p>
+          </div>
+        </div>
+
+        <div class="enquiry-card">
+          <div class="eq-icon blue">✉️</div>
+          <div>
+            <h4>Email Us</h4>
+            <p><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a><br/>We respond within 24 hours</p>
+          </div>
+        </div>
+
+        <div class="enquiry-card">
+          <div class="eq-icon">💬</div>
+          <div>
+            <h4>WhatsApp Enquiry</h4>
+            <p><a href="https://wa.me/919999999999">Chat on WhatsApp</a><br/>Quick responses during working hours</p>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:.5rem;">📍</div>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.75);">Map will appear here<br/>Add your Google Maps embed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Side -->
+      <div class="reveal d2">
+        <div style="background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.5rem;box-shadow:0 4px 24px var(--shadow);">
+          <div class="section-label" style="margin-bottom:.6rem;">Inquiry Form</div>
+          <h3 style="color:var(--blue-deep);margin-bottom:.3rem;">Send Us a Message</h3>
+          <p style="font-size:.88rem;color:var(--text-mid);margin-bottom:2rem;">Fill in your details and we'll get back to you promptly.</p>
+
+          <form id="inquiryForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Priya" required/>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Sharma" required/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="priya@example.com" required/>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required/>
+              </div>
+              <div class="form-group">
+                <label for="grade">Student Grade</label>
+                <select id="grade" name="grade">
+                  <option value="">Select Grade</option>
+                  <option>Grade 7</option>
+                  <option>Grade 8</option>
+                  <option>Grade 9</option>
+                  <option>Grade 10</option>
+                  <option>Not applicable</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="board">Board</label>
+              <select id="board" name="board">
+                <option value="">Select Board</option>
+                <option>SSC (State Board)</option>
+                <option>ICSE</option>
+                <option>CBSE</option>
+                <option>IGCSE</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Programme of Interest</label>
+              <div class="prog-select" id="progSelect">
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Academic Center</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Sarthi Batch</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Apex Batch</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Ikigai Batch</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Activity Center</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Mind Vista</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Saksham</button>
+                <button type="button" class="prog-btn" onclick="toggleProg(this)">Readers Club</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us a little more about what you're looking for, or any specific questions you have..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-lg" style="width:100%;justify-content:center;">Send Message →</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS BY PROGRAMME -->
+<section class="section-sm bg-light">
+  <div class="container">
+    <div class="text-center reveal" style="margin-bottom:2.5rem;">
+      <div class="section-label">Direct Enquiries</div>
+      <h2 class="section-title" style="font-size:1.8rem;">Looking for Something <span class="accent">Specific?</span></h2>
+    </div>
+    <div class="card-grid-3">
+      <div class="card reveal d1" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 1.2rem;">🎓</div>
+        <h3>Academic Programs</h3>
+        <p>Enquiries for Sarthi, Apex, Ikigai batches and subject coaching for grades 7–10</p>
+        <a href="index.html" class="btn btn-outline-blue" style="margin-top:1.2rem;font-size:.82rem;padding:.6rem 1.4rem;">Learn More</a>
+      </div>
+      <div class="card reveal d2" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 1.2rem;">🎨</div>
+        <h3>Activity Center</h3>
+        <p>Memory classes, Vedic Maths, Spoken English, Fun with Science and more enrichment activities</p>
+        <a href="activity.html" class="btn btn-outline-blue" style="margin-top:1.2rem;font-size:.82rem;padding:.6rem 1.4rem;">Learn More</a>
+      </div>
+      <div class="card reveal d3" style="text-align:center;">
+        <div class="card-icon" style="margin:0 auto 1.2rem;">🌍</div>
+        <h3>Mind Vista &amp; Saksham</h3>
+        <p>Overseas education counselling and government-affiliated skill development programmes</p>
+        <a href="mindvista.html" class="btn btn-outline-blue" style="margin-top:1.2rem;font-size:.82rem;padding:.6rem 1.4rem;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container" style="max-width:800px;">
+    <div class="text-center reveal" style="margin-bottom:2.5rem;">
+      <div class="section-label">FAQs</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
+    </div>
+    <div id="faqList">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What boards does Kaizen Academy cover?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Kaizen Academy offers coaching for all four major boards: SSC (Maharashtra State Board), ICSE, CBSE, and IGCSE (Cambridge International). We have dedicated batches structured around board-specific requirements.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal d1">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What are the Sarthi, Apex and Ikigai batches?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>These are Kaizen Academy's three signature academic batches. Sarthi is for grades 9–10 SSC students, Apex is for grades 9–10 ICSE/CBSE/IGCSE students, and Ikigai is for grades 7–8 across all boards.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal d2">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can my child join both academic and activity programmes?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Absolutely! Many students attend both. Our academic and activity schedules are designed to complement each other with no conflicts. Activity classes run on separate slots — often weekends or early evenings.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal d3">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Is Mind Vista only for 10th or 12th grade students?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Mind Vista counselling is available to students at any stage of their academic journey — from early planning in grade 9 to last-minute applications for university. We recommend starting early for the best outcomes.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          What kind of certificates does Saksham offer?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Saksham is affiliated with the Government of India's skill development initiative and issues nationally recognised certificates aligned with the National Skills Qualifications Framework (NSQF). These are valid across India and respected by employers.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal d1">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I enrol or book a consultation?
+          <span>+</span>
+        </div>
+        <div class="faq-a">
+          <p>Simply fill in the inquiry form on this page, call us at +91 99999 99999, or WhatsApp us. Our team will get back to you within 24 hours to guide you through the enrolment or consultation process.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-sm bg-deep">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="color:var(--white);margin-bottom:.8rem;">Begin Your Journey with <span style="color:var(--gold-light);">Kaizen Today</span></h2>
+      <p style="color:rgba(255,255,255,.7);max-width:460px;margin:0 auto 2rem;">Hundreds of students have already found their path with Kaizen Academy. Yours starts with a single conversation.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="tel:+919999999999" class="btn btn-gold btn-lg">📞 Call Us Now</a>
+        <a href="index.html" class="btn btn-outline btn-lg">Explore Programmes →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+        </a>
+        <p>Empowering students from grade 7 to 10 across all major boards through innovative teaching, holistic development, and the philosophy of continuous growth.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Academic Center</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+          <li><a href="vision.html">Vision &amp; Mission</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Programmes</h5>
+        <ul>
+          <li><a href="index.html">Sarthi Batch</a></li>
+          <li><a href="index.html">Apex Batch</a></li>
+          <li><a href="index.html">Ikigai Batch</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="contact.html">Inquiry Form</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+          <li><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="gold">Kaizen Academy</span>. All rights reserved. Empowering Excellence, One Student at a Time.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function toggleProg(btn) {
+  btn.classList.toggle('active');
+}
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const ans = item.querySelector('.faq-a');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-a').classList.remove('open');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    ans.classList.add('open');
+  }
+}
+</script>
+</body>
+</html>

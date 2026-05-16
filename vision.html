@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Vision &amp; Mission – Kaizen Academy</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.vm-card{border-radius:var(--radius-xl);padding:3rem;position:relative;overflow:hidden;}
+.vm-card.vision{background:linear-gradient(145deg,var(--blue-deep),var(--blue-mid));}
+.vm-card.mission{background:linear-gradient(145deg,#0a3020,#1a6b2a);}
+.vm-deco{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.08);}
+.vm-label{display:inline-block;background:rgba(201,162,39,.15);border:1px solid rgba(201,162,39,.3);border-radius:100px;padding:.35rem 1rem;font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light);margin-bottom:1.2rem;}
+.vm-statement{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.5rem);color:var(--white);line-height:1.65;margin-bottom:1.5rem;}
+.vm-card p{color:rgba(255,255,255,.72);font-size:.93rem;}
+.value-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem;}
+.val-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.2rem;text-align:center;box-shadow:0 3px 16px var(--shadow);transition:all .35s var(--ease);}
+.val-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px var(--shadow-hover);}
+.val-card .vi{font-size:2.8rem;margin-bottom:1rem;}
+.val-card h3{color:var(--blue-deep);font-size:1.1rem;margin-bottom:.6rem;}
+.val-card p{font-size:.88rem;}
+.philosophy-box{background:linear-gradient(135deg,var(--gold-pale),rgba(201,162,39,.08));border:1px solid rgba(201,162,39,.2);border-radius:var(--radius-xl);padding:3.5rem;text-align:center;}
+.kaizen-char{font-size:5rem;color:var(--gold);opacity:.3;font-family:'Playfair Display',serif;line-height:1;}
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.promise-item{display:flex;gap:1rem;align-items:flex-start;padding:1.5rem;background:var(--off-white);border:1px solid var(--border);border-radius:var(--radius);transition:all .3s var(--ease);}
+.promise-item:hover{background:white;box-shadow:0 6px 24px var(--shadow-hover);transform:translateY(-3px);}
+.promise-item .pi-num{width:40px;height:40px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;color:var(--blue-dark);flex-shrink:0;}
+.promise-item h4{color:var(--blue-deep);margin-bottom:.25rem;font-size:.9rem;}
+.promise-item p{font-size:.83rem;}
+@media(max-width:768px){.value-row{grid-template-columns:1fr;}.promise-grid{grid-template-columns:1fr;}}
+@media(max-width:580px){.value-row{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html" class="active">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="min-height:60vh;">
+  <div class="hero-bg" style="background:linear-gradient(135deg,#071226 0%,#0d2b6b 50%,#1a1a3e 100%);"></div>
+  <div class="hero-orb" style="width:500px;height:500px;top:-120px;right:-100px;background:radial-gradient(circle,rgba(201,162,39,.12) 0%,transparent 70%);"></div>
+  <div class="geo-shape" style="width:300px;height:300px;bottom:10%;left:5%;animation-duration:40s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;padding:3rem 1.5rem;">
+    <div class="hero-left" style="max-width:680px;">
+      <div class="hero-badge">⭐ Our Purpose &amp; Promise</div>
+      <h1 class="hero-title">Vision &amp; <span class="gold-text">Mission</span></h1>
+      <p class="hero-desc">At Kaizen Academy, everything we do is guided by a clear purpose: to nurture every student's potential through the power of continuous improvement, expert guidance, and genuine care.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VISION & MISSION CARDS -->
+<section class="section">
+  <div class="container">
+    <div class="card-grid-2" style="gap:2.5rem;margin-bottom:3rem;">
+
+      <div class="vm-card vision reveal">
+        <div class="vm-deco" style="width:250px;height:250px;top:-80px;right:-80px;"></div>
+        <div class="vm-deco" style="width:150px;height:150px;bottom:-40px;left:-40px;"></div>
+        <div style="position:relative;z-index:2;">
+          <div class="vm-label">👁️ Our Vision</div>
+          <div class="vm-statement">
+            "To be the most trusted educational partner for every family — inspiring students to discover their unique potential and empowering them to lead purposeful, successful lives."
+          </div>
+          <p>We envision a world where quality education is accessible, inspiring, and transformative — where every child walks out of Kaizen Academy not just with knowledge, but with character, confidence, and the courage to dream big.</p>
+        </div>
+      </div>
+
+      <div class="vm-card mission reveal d2">
+        <div class="vm-deco" style="width:250px;height:250px;top:-80px;right:-80px;"></div>
+        <div class="vm-deco" style="width:150px;height:150px;bottom:-40px;left:-40px;"></div>
+        <div style="position:relative;z-index:2;">
+          <div class="vm-label">🎯 Our Mission</div>
+          <div class="vm-statement">
+            "To deliver exceptional academic coaching, enriching activity programmes, and transformative skill development — all rooted in the Kaizen philosophy of continuous, daily improvement."
+          </div>
+          <p>Our mission is to create an environment where students feel safe to learn, challenge themselves and grow — supported by expert educators, innovative methods, and a community that believes in their potential.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section-sm bg-light">
+  <div class="container">
+    <div class="philosophy-box reveal">
+      <div class="kaizen-char">改善</div>
+      <div class="section-label" style="margin-top:.5rem;">The Kaizen Philosophy</div>
+      <h2 style="color:var(--blue-deep);margin-bottom:1rem;">Continuous Improvement, <span style="color:var(--gold);">Every Single Day</span></h2>
+      <p style="max-width:680px;margin:0 auto 1.5rem;font-size:1.02rem;color:var(--text-mid);line-height:1.8;">
+        The word <strong style="color:var(--blue-deep);">Kaizen (改善)</strong> is Japanese for "good change" — the practice of continuous improvement in small, consistent steps. We chose this name because we believe that excellence is not an event but a habit. Every lesson taught, every concept explained, every student supported — each moment is an opportunity for improvement.
+      </p>
+      <p style="max-width:680px;margin:0 auto;font-size:.95rem;color:var(--text-mid);">
+        This philosophy permeates everything at Kaizen Academy: our faculty continuously upskills, our curriculum evolves with board changes, our methods adapt to each student's learning style, and our students are encouraged to grow a little more, every single day.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Core Values</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">The Principles That <span class="accent">Guide Us</span></h2>
+      <p class="section-lead">Our values are not words on a wall — they are the lived practices that shape every interaction, every class, and every decision at Kaizen Academy.</p>
+    </div>
+    <div class="value-row">
+      <div class="val-card reveal d1">
+        <div class="vi">🌟</div>
+        <h3>Excellence</h3>
+        <p>We hold ourselves and our students to the highest standard — not perfection, but the relentless pursuit of growth and quality in everything we do.</p>
+      </div>
+      <div class="val-card reveal d2">
+        <div class="vi">❤️</div>
+        <h3>Compassion</h3>
+        <p>Every student is a whole person with unique challenges and dreams. We teach with empathy, patience and genuine care for each individual's wellbeing.</p>
+      </div>
+      <div class="val-card reveal d3">
+        <div class="vi">🔍</div>
+        <h3>Curiosity</h3>
+        <p>We nurture a love of questioning, exploring and discovering. Learning is most powerful when it is driven by genuine curiosity rather than compulsion.</p>
+      </div>
+      <div class="val-card reveal d1">
+        <div class="vi">🤝</div>
+        <h3>Integrity</h3>
+        <p>Honesty and transparency in all we do — with students, parents, and partners. We build trust through consistent, principled action.</p>
+      </div>
+      <div class="val-card reveal d2">
+        <div class="vi">🌱</div>
+        <h3>Growth Mindset</h3>
+        <p>We believe that abilities can be developed through dedication and hard work. Every challenge is an opportunity; every mistake, a lesson.</p>
+      </div>
+      <div class="val-card reveal d3">
+        <div class="vi">🌈</div>
+        <h3>Inclusivity</h3>
+        <p>We welcome students from all boards, backgrounds, and learning profiles. Every child deserves an equal opportunity to flourish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROMISE -->
+<section class="section bg-deep">
+  <div class="container text-on-dark">
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div class="section-label">Our Promise to You</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title" style="color:white;">What Every Kaizen Student <span class="accent">Can Expect</span></h2>
+    </div>
+    <div class="promise-grid">
+      <div class="promise-item reveal d1" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">1</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Personalised Attention</h4>
+          <p style="color:rgba(255,255,255,.7);">Small batch sizes ensure every student gets the individual attention they need to truly understand and excel.</p>
+        </div>
+      </div>
+      <div class="promise-item reveal d2" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">2</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Qualified &amp; Passionate Faculty</h4>
+          <p style="color:rgba(255,255,255,.7);">Teachers who are experts in their subjects and genuinely passionate about nurturing young minds.</p>
+        </div>
+      </div>
+      <div class="promise-item reveal d1" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">3</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Regular Progress Feedback</h4>
+          <p style="color:rgba(255,255,255,.7);">Parents are kept informed through regular assessments, reports, and open-door communication with faculty.</p>
+        </div>
+      </div>
+      <div class="promise-item reveal d2" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">4</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Safe &amp; Nurturing Environment</h4>
+          <p style="color:rgba(255,255,255,.7);">A space where students feel safe to ask questions, make mistakes, and grow without fear of judgement.</p>
+        </div>
+      </div>
+      <div class="promise-item reveal d1" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">5</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Holistic Development</h4>
+          <p style="color:rgba(255,255,255,.7);">Beyond marks — we shape character, critical thinking, communication and confidence through every programme.</p>
+        </div>
+      </div>
+      <div class="promise-item reveal d2" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="pi-num">6</div>
+        <div>
+          <h4 style="color:var(--gold-light);">Continuous Improvement</h4>
+          <p style="color:rgba(255,255,255,.7);">Our methods, materials and approach constantly evolve so that our students always receive the best possible education.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="section-sm" style="background:var(--gold-pale);border-top:1px solid rgba(201,162,39,.2);">
+  <div class="container text-center">
+    <div class="reveal" style="max-width:700px;margin:0 auto;">
+      <div style="font-size:4rem;color:var(--gold);opacity:.4;line-height:1;font-family:'Playfair Display',serif;margin-bottom:-.5rem;">"</div>
+      <p class="big-quote" style="padding-left:0;font-size:clamp(1.1rem,2.5vw,1.6rem);">Education is not the filling of a pail, but the lighting of a fire.</p>
+      <p style="margin-top:1rem;font-size:.85rem;font-weight:600;color:var(--gold);letter-spacing:1px;">— W.B. Yeats &nbsp;|&nbsp; Our Guiding Inspiration</p>
+      <div style="margin-top:2rem;">
+        <a href="contact.html" class="btn btn-primary">Join the Kaizen Family →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+        </a>
+        <p>Empowering students from grade 7 to 10 across all major boards through innovative teaching, holistic development, and the philosophy of continuous growth.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Academic Center</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+          <li><a href="vision.html">Vision &amp; Mission</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Our Values</h5>
+        <ul>
+          <li><a href="#values">Excellence</a></li>
+          <li><a href="#values">Compassion</a></li>
+          <li><a href="#values">Curiosity</a></li>
+          <li><a href="#values">Integrity</a></li>
+          <li><a href="#values">Inclusivity</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="contact.html">Inquiry Form</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+          <li><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="gold">Kaizen Academy</span>. All rights reserved. Empowering Excellence, One Student at a Time.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

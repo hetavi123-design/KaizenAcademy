@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kaizen Academy – Academic Center</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.pillar-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem;}
+.pillar{display:flex;gap:.9rem;align-items:flex-start;padding:1.1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);}
+.pillar .p-icon{font-size:1.4rem;flex-shrink:0;}
+.pillar h4{color:var(--gold-light);font-size:.88rem;margin-bottom:.15rem;}
+.pillar p{font-size:.8rem;color:rgba(255,255,255,.65);}
+@media(max-width:768px){.about-grid{grid-template-columns:1fr;gap:2.5rem;}.pillar-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-orb" style="width:600px;height:600px;top:-150px;right:-150px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:400px;height:400px;bottom:-100px;left:-100px;background:radial-gradient(circle,rgba(45,107,196,.15) 0%,transparent 70%);animation-delay:3s;"></div>
+  <div class="geo-shape" style="width:300px;height:300px;top:10%;right:5%;animation-duration:40s;"></div>
+  <div class="geo-shape" style="width:180px;height:180px;top:20%;right:12%;animation-duration:28s;animation-direction:reverse;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap">
+    <div class="hero-left">
+      <div class="hero-badge">✦ Academic Center for Grades 7–10</div>
+      <h1 class="hero-title">Where Every Grade Becomes a <span class="gold-text">Gateway to Success</span></h1>
+      <p class="hero-desc">Kaizen Academy offers comprehensive coaching across SSC, ICSE, CBSE and IGCSE boards — with dedicated batches, expert faculty, and a culture of continuous growth.</p>
+      <div class="hero-actions">
+        <a href="#batches" class="btn btn-gold btn-lg">Explore Batches</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Enrol Now →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-grid">
+        <div class="mini-card"><div class="icon">📚</div><h4>All Boards</h4><p>SSC · ICSE · CBSE · IGCSE</p></div>
+        <div class="mini-card"><div class="icon">🎯</div><h4>Grades 7–10</h4><p>Structured learning paths</p></div>
+        <div class="mini-card"><div class="icon">🏆</div><h4>3 Unique Batches</h4><p>Sarthi · Apex · Ikigai</p></div>
+        <div class="mini-card"><div class="icon">📖</div><h4>All Subjects</h4><p>Science · Math · Languages</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="reveal">
+      <div class="stat-num" data-target="500" data-suffix="+">500+</div>
+      <div class="stat-lbl">Happy Students</div>
+    </div>
+    <div class="reveal d1">
+      <div class="stat-num" data-target="10" data-suffix="+">10+</div>
+      <div class="stat-lbl">Years of Excellence</div>
+    </div>
+    <div class="reveal d2">
+      <div class="stat-num" data-target="4" data-suffix="">4</div>
+      <div class="stat-lbl">Boards Covered</div>
+    </div>
+    <div class="reveal d3">
+      <div class="stat-num" data-target="98" data-suffix="%">98%</div>
+      <div class="stat-lbl">Result Rate</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section bg-deep">
+  <div class="container">
+    <div class="about-grid">
+      <div class="text-on-dark">
+        <div class="section-label">Our Philosophy</div>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">The <span class="accent">Kaizen</span> Way</h2>
+        <p class="section-lead" style="color:rgba(255,255,255,.72);margin-bottom:1.5rem;">
+          Kaizen (改善) is a Japanese philosophy meaning <em>continuous improvement</em>. At Kaizen Academy, we believe every student holds the potential to grow — one step at a time. We don't just teach subjects; we shape thinkers, problem-solvers, and future leaders.
+        </p>
+        <div class="pillar-grid">
+          <div class="pillar"><div class="p-icon">🎯</div><div><h4>Academic Excellence</h4><p>Rigorous curriculum aligned to board standards</p></div></div>
+          <div class="pillar"><div class="p-icon">🌱</div><div><h4>Holistic Growth</h4><p>Beyond marks — character & confidence</p></div></div>
+          <div class="pillar"><div class="p-icon">👩‍🏫</div><div><h4>Expert Faculty</h4><p>Experienced educators who truly care</p></div></div>
+          <div class="pillar"><div class="p-icon">💡</div><div><h4>Personalised Care</h4><p>Small batches, individual attention</p></div></div>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-xl);padding:2.5rem;color:white;">
+          <div style="font-size:3rem;margin-bottom:1rem;">🎓</div>
+          <h3 style="color:var(--gold-light);font-size:1.6rem;margin-bottom:.5rem;">Grades 7 to 10</h3>
+          <p style="color:rgba(255,255,255,.7);margin-bottom:1.5rem;">Four boards. One roof. Infinite possibilities.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+            <span class="batch-tag">SSC Board</span>
+            <span class="batch-tag">ICSE Board</span>
+            <span class="batch-tag">CBSE Board</span>
+            <span class="batch-tag">IGCSE Board</span>
+            <span class="batch-tag">All Subjects</span>
+            <span class="batch-tag">Grades 7–10</span>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:-18px;right:-18px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:var(--radius);padding:1rem 1.4rem;color:var(--blue-dark);font-weight:800;font-size:.85rem;box-shadow:0 6px 20px var(--shadow-gold);">
+          ✦ Kaizen = Growth Every Day
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOARDS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Boards We Cover</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">One Academy, <span class="accent">All Major Boards</span></h2>
+      <p class="section-lead">Whether your child is in state board or international curriculum, Kaizen Academy has the right programme and the right teachers for them.</p>
+    </div>
+    <div class="card-grid-4">
+      <div class="board-card reveal d1">
+        <div class="board-icon">📘</div>
+        <h3>SSC</h3>
+        <div class="board-full">Maharashtra State Board</div>
+        <p>Comprehensive preparation for SSC board examinations with focused subject mastery and exam strategies.</p>
+      </div>
+      <div class="board-card reveal d2">
+        <div class="board-icon">🎓</div>
+        <h3>ICSE</h3>
+        <div class="board-full">Indian Certificate of Secondary Education</div>
+        <p>In-depth coverage of ICSE syllabus with analytical and application-based learning approach.</p>
+      </div>
+      <div class="board-card reveal d3">
+        <div class="board-icon">🏫</div>
+        <h3>CBSE</h3>
+        <div class="board-full">Central Board of Secondary Education</div>
+        <p>NCERT-aligned teaching with concept clarity, practice papers, and smart exam techniques.</p>
+      </div>
+      <div class="board-card reveal d4">
+        <div class="board-icon">🌍</div>
+        <h3>IGCSE</h3>
+        <div class="board-full">Cambridge International</div>
+        <p>International curriculum support with critical thinking, research skills and global academic standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BATCHES -->
+<section class="section bg-light" id="batches">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Our Signature Batches</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">Designed for Every <span class="accent">Stage of Learning</span></h2>
+      <p class="section-lead">Each batch is carefully crafted with a unique identity, tailored curriculum, and a philosophy that inspires students to reach their highest potential.</p>
+    </div>
+    <div class="batch-grid">
+
+      <!-- Sarthi -->
+      <div class="batch-card sarthi reveal d1">
+        <div class="batch-deco" style="width:200px;height:200px;top:-60px;right:-60px;"></div>
+        <div class="batch-deco" style="width:120px;height:120px;bottom:-30px;left:-30px;"></div>
+        <div class="batch-badge">Grades 9 &amp; 10</div>
+        <div class="batch-name">Sarthi</div>
+        <div class="batch-sub">The Guide &amp; Companion</div>
+        <p class="batch-desc">
+          Sarthi means a trusted companion on your journey. Our Sarthi Batch holds the hand of every SSC student through the most critical grades, building exam readiness and subject confidence.
+        </p>
+        <div class="batch-tags">
+          <span class="batch-tag">SSC Board</span>
+          <span class="batch-tag">Grade 9</span>
+          <span class="batch-tag">Grade 10</span>
+          <span class="batch-tag">All Subjects</span>
+        </div>
+      </div>
+
+      <!-- Apex -->
+      <div class="batch-card apex reveal d2">
+        <div class="batch-deco" style="width:200px;height:200px;top:-60px;right:-60px;"></div>
+        <div class="batch-deco" style="width:120px;height:120px;bottom:-30px;left:-30px;"></div>
+        <div class="batch-badge">Grades 9 &amp; 10</div>
+        <div class="batch-name">Apex</div>
+        <div class="batch-sub">Reach the Pinnacle</div>
+        <p class="batch-desc">
+          The Apex Batch pushes students towards the highest standards of academic achievement. Designed for ICSE, CBSE and IGCSE students who aim for excellence in every subject.
+        </p>
+        <div class="batch-tags">
+          <span class="batch-tag">ICSE</span>
+          <span class="batch-tag">CBSE</span>
+          <span class="batch-tag">IGCSE</span>
+          <span class="batch-tag">Grade 9</span>
+          <span class="batch-tag">Grade 10</span>
+        </div>
+      </div>
+
+      <!-- Ikigai -->
+      <div class="batch-card ikigai reveal d3">
+        <div class="batch-deco" style="width:200px;height:200px;top:-60px;right:-60px;"></div>
+        <div class="batch-deco" style="width:120px;height:120px;bottom:-30px;left:-30px;"></div>
+        <div class="batch-badge">Grades 7 &amp; 8</div>
+        <div class="batch-name">Ikigai</div>
+        <div class="batch-sub">Your Reason for Being</div>
+        <p class="batch-desc">
+          Ikigai is the Japanese concept of finding joy and purpose. Our Ikigai Batch nurtures young learners across all boards, building strong foundations and a love for learning in grades 7 and 8.
+        </p>
+        <div class="batch-tags">
+          <span class="batch-tag">All Boards</span>
+          <span class="batch-tag">Grade 7</span>
+          <span class="batch-tag">Grade 8</span>
+          <span class="batch-tag">All Subjects</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPECIAL PROGRAMS -->
+<section class="section" id="special">
+  <div class="container">
+    <div class="feature-row">
+      <div class="reveal">
+        <div class="section-label">Special Programmes</div>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Beyond the <span class="accent">Textbook</span></h2>
+        <p style="font-size:.97rem;color:var(--text-mid);margin-bottom:2rem;">
+          Kaizen Academy goes beyond board syllabus with special enrichment classes that strengthen language, communication and a lifelong love for reading.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div class="special-card">
+            <div class="special-icon">✍️</div>
+            <div>
+              <h4>Grammar Classes</h4>
+              <p>Targeted sessions on English grammar — from sentence construction to advanced usage — empowering students to write and speak with precision and confidence.</p>
+            </div>
+          </div>
+          <div class="special-card">
+            <div class="special-icon">🔤</div>
+            <div>
+              <h4>Phonics</h4>
+              <p>Structured phonics instruction building strong reading foundations, pronunciation accuracy, and spelling skills — particularly beneficial for early learners in grades 7–8.</p>
+            </div>
+          </div>
+          <div class="special-card">
+            <div class="special-icon">📚</div>
+            <div>
+              <h4>Readers Club</h4>
+              <p>A thriving community of young readers who explore literature, discuss books, and grow their vocabulary. We organise regular reading events and book discussions to nurture a lifelong habit of reading.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d2" style="position:relative;">
+        <div style="background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));border-radius:var(--radius-xl);padding:3rem 2.5rem;color:white;text-align:center;">
+          <div style="font-size:4rem;margin-bottom:1rem;">📖</div>
+          <h3 style="color:var(--gold-light);margin-bottom:.8rem;">Every Student is a <br/>Unique Learner</h3>
+          <p style="color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.7;">Our special classes complement the academic curriculum, ensuring students develop strong communication skills, reading habits, and linguistic confidence.</p>
+          <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:center;">
+              <div><div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">3</div><div style="font-size:.78rem;color:rgba(255,255,255,.6);">Special Programmes</div></div>
+              <div><div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">📚</div><div style="font-size:.78rem;color:rgba(255,255,255,.6);">Active Readers Club</div></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute;bottom:-16px;left:2rem;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:var(--radius);padding:.9rem 1.4rem;color:var(--blue-dark);font-weight:700;font-size:.82rem;box-shadow:0 6px 20px var(--shadow-gold);">
+          ✦ Enrolments Open Now
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm bg-deep">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="color:var(--white);margin-bottom:.8rem;">Begin Your <span style="color:var(--gold-light);">Kaizen Journey</span> Today</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 2rem;">Join hundreds of students who are growing every single day with Kaizen Academy's guided, structured, and inspiring academic programmes.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-gold btn-lg">Enquire Now</a>
+        <a href="vision.html" class="btn btn-outline btn-lg">Our Philosophy →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+        </a>
+        <p>Empowering students from grade 7 to 10 across all major boards through innovative teaching, holistic development, and the philosophy of continuous growth.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Academic Center</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+          <li><a href="vision.html">Vision &amp; Mission</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Batches</h5>
+        <ul>
+          <li><a href="#batches">Sarthi Batch</a></li>
+          <li><a href="#batches">Apex Batch</a></li>
+          <li><a href="#batches">Ikigai Batch</a></li>
+          <li><a href="#special">Grammar Classes</a></li>
+          <li><a href="#special">Phonics</a></li>
+          <li><a href="#special">Readers Club</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="contact.html">Inquiry Form</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+          <li><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="gold">Kaizen Academy</span>. All rights reserved. Empowering Excellence, One Student at a Time.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

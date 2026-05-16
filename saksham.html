@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Saksham Skill Development Center</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:0 2px 12px var(--shadow);transition:all .35s var(--ease);position:relative;overflow:hidden;}
+.skill-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),var(--gold-light));transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease);}
+.skill-card:hover::before{transform:scaleY(1);}
+.skill-card:hover{transform:translateX(6px);box-shadow:0 10px 32px var(--shadow-hover);}
+.skill-icon{font-size:2rem;margin-bottom:1rem;}
+.skill-card h3{color:var(--blue-deep);margin-bottom:.5rem;font-size:1.05rem;}
+.skill-card p{font-size:.88rem;}
+.cert-tag{display:inline-block;background:linear-gradient(135deg,#1a6b2a,#2d9e40);color:white;border-radius:100px;padding:.2rem .7rem;font-size:.7rem;font-weight:700;letter-spacing:1px;margin-top:.8rem;}
+.govt-banner{background:linear-gradient(135deg,#0a3020,#1a6b2a);border-radius:var(--radius-lg);padding:2.5rem;color:white;text-align:center;position:relative;overflow:hidden;}
+.govt-banner::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border:1px solid rgba(255,255,255,.1);border-radius:50%;}
+.govt-banner::after{content:'';position:absolute;bottom:-60px;left:-60px;width:250px;height:250px;border:1px solid rgba(255,255,255,.08);border-radius:50%;}
+.benefit-item{display:flex;gap:.75rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--border);}
+.benefit-item:last-child{border-bottom:none;}
+.benefit-item .bi-icon{font-size:1.2rem;flex-shrink:0;margin-top:.05rem;}
+.benefit-item h4{font-size:.9rem;color:var(--blue-deep);margin-bottom:.1rem;font-family:'Poppins',sans-serif;}
+.benefit-item p{font-size:.83rem;}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html" class="active">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background:linear-gradient(135deg,#071226 0%,#0d3b20 50%,#1a6b2a 100%);"></div>
+  <div class="hero-orb" style="width:520px;height:520px;top:-120px;right:-110px;background:radial-gradient(circle,rgba(45,158,64,.15) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:360px;height:360px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);animation-delay:2.5s;"></div>
+  <div class="geo-shape" style="width:270px;height:270px;top:15%;right:7%;animation-duration:34s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;">
+    <div class="hero-left" style="max-width:740px;">
+      <div class="hero-badge">🏆 Government Affiliated Skill Development</div>
+      <h1 class="hero-title">Saksham <span class="gold-text">Skill Development</span> Center</h1>
+      <p class="hero-desc">Empowering individuals with job-ready skills and nationally recognised certifications. Saksham is affiliated with the Government of India's skill development mission — your gateway to meaningful employment and entrepreneurship.</p>
+      <div class="hero-actions">
+        <a href="#skills" class="btn btn-gold btn-lg">Explore Courses</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Enrol Today →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVT AFFILIATION BANNER -->
+<section class="section-sm" style="background:var(--off-white);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="reveal">
+      <div class="govt-banner">
+        <div style="position:relative;z-index:2;">
+          <div style="font-size:3rem;margin-bottom:.8rem;">🇮🇳</div>
+          <h2 style="color:var(--gold-light);margin-bottom:.6rem;font-size:1.6rem;">Government Affiliated &amp; Certified</h2>
+          <p style="color:rgba(255,255,255,.75);max-width:600px;margin:0 auto 1.5rem;font-size:.95rem;">Saksham Skill Development Center operates under the umbrella of India's national skill development framework. Our certifications are nationally recognised and respected by employers across industries.</p>
+          <div style="display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:1rem 1.8rem;color:white;font-weight:700;font-size:.9rem;">
+            <span style="font-size:1.5rem;">✅</span>
+            Affiliated with Government of India Skill Development Initiative
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="reveal">
+        <div class="section-label">About Saksham</div>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Skills That <span class="accent">Open Doors</span></h2>
+        <p style="color:var(--text-mid);margin-bottom:1.2rem;">
+          Saksham — meaning "capable" in Sanskrit — is our promise to every student and professional who walks through our doors. We are dedicated to equipping individuals with practical, industry-relevant skills that lead to real employment opportunities.
+        </p>
+        <p style="color:var(--text-mid);margin-bottom:1.5rem;">
+          As a government-affiliated center, Saksham's training programmes adhere to nationally defined skill standards. Graduates receive certifications that are valid across India and recognised by employers in both the public and private sectors.
+        </p>
+        <div>
+          <div class="benefit-item">
+            <div class="bi-icon">🎓</div>
+            <div><h4>Nationally Recognised Certificates</h4><p>Certifications aligned with the National Skills Qualifications Framework (NSQF)</p></div>
+          </div>
+          <div class="benefit-item">
+            <div class="bi-icon">👩‍💼</div>
+            <div><h4>Industry-Ready Training</h4><p>Hands-on, practical modules designed with current industry requirements</p></div>
+          </div>
+          <div class="benefit-item">
+            <div class="bi-icon">💼</div>
+            <div><h4>Placement Assistance</h4><p>Career guidance and placement support to help graduates land their first opportunity</p></div>
+          </div>
+          <div class="benefit-item">
+            <div class="bi-icon">🌱</div>
+            <div><h4>Entrepreneurship Support</h4><p>Guidance for students who wish to start their own venture using acquired skills</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d2" style="position:relative;">
+        <div style="background:linear-gradient(135deg,#0a3020,#1a6b2a);border-radius:var(--radius-xl);padding:3rem;color:white;">
+          <div style="font-size:3.5rem;margin-bottom:1rem;">🏆</div>
+          <h3 style="color:var(--gold-light);margin-bottom:.8rem;">Why Saksham?</h3>
+          <p style="color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.7;margin-bottom:1.5rem;">In today's competitive world, formal degrees alone are not enough. Saksham bridges the gap between education and employment by providing targeted skill training that employers actively seek.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;text-align:center;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">100%</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Govt. Recognised</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;text-align:center;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">NSQF</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Framework Aligned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS / COURSES -->
+<section class="section bg-light" id="skills">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Our Programmes</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">Build Skills, <span class="accent">Build Futures</span></h2>
+      <p class="section-lead">A diverse range of skill development programmes designed for students, job-seekers and working professionals looking to upskill or re-skill.</p>
+    </div>
+    <div class="card-grid-3">
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">💻</div>
+        <h3>Digital Literacy &amp; Computer Skills</h3>
+        <p>Comprehensive computer training covering MS Office, internet skills, email etiquette, data entry and foundational digital literacy — essential for every modern workplace.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">📊</div>
+        <h3>Accounts &amp; Tally</h3>
+        <p>Practical accounting skills including Tally ERP, GST filing, bookkeeping, and financial statement preparation — highly sought-after by businesses of all sizes.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">🗣️</div>
+        <h3>Communication &amp; Soft Skills</h3>
+        <p>Spoken English, professional communication, interview skills, resume writing, and workplace etiquette to prepare students for confident professional life.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">✂️</div>
+        <h3>Tailoring &amp; Fashion Designing</h3>
+        <p>From basic stitching to garment construction and design — a skill that can lead to self-employment, boutique ownership, or a career in the fashion industry.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">💆</div>
+        <h3>Beauty &amp; Wellness</h3>
+        <p>Professional training in skincare, haircare, bridal makeup, mehendi and salon management — skills for a thriving self-employment career in the beauty sector.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">🔧</div>
+        <h3>Electrician &amp; Technical Skills</h3>
+        <p>Hands-on training in basic electrical work, home appliance repair, wiring and safety — empowering youth for technical employment and entrepreneurship.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d1">
+        <div class="skill-icon">🍳</div>
+        <h3>Food Processing &amp; Catering</h3>
+        <p>Practical training in food preparation, hygiene, catering operations, and food entrepreneurship — a high-demand sector with tremendous growth potential.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d2">
+        <div class="skill-icon">🏥</div>
+        <h3>Healthcare Support</h3>
+        <p>Foundation training for healthcare assistants, home caregivers, and medical support staff — addressing India's growing demand for qualified healthcare personnel.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+      <div class="skill-card reveal d3">
+        <div class="skill-icon">🌾</div>
+        <h3>Retail &amp; Customer Service</h3>
+        <p>Skills for the modern retail sector — customer handling, inventory management, billing systems, and visual merchandising for employment in India's booming retail industry.</p>
+        <div class="cert-tag">✓ Certified Programme</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATION SECTION -->
+<section class="section bg-deep">
+  <div class="container text-on-dark">
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div class="section-label">Certification</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title" style="color:white;">Your Certificate, Your <span class="accent">Credential</span></h2>
+      <p class="section-lead" style="max-width:580px;">Saksham certifications carry the weight of government recognition and industry trust.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal d1" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">📝</div>
+        <h4 style="color:var(--gold-light);">Enrol</h4>
+        <p style="color:rgba(255,255,255,.7);">Choose your skill programme and complete registration with our team</p>
+      </div>
+      <div class="step-card reveal d2" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">📚</div>
+        <h4 style="color:var(--gold-light);">Train</h4>
+        <p style="color:rgba(255,255,255,.7);">Attend practical, instructor-led sessions with hands-on learning</p>
+      </div>
+      <div class="step-card reveal d3" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">✅</div>
+        <h4 style="color:var(--gold-light);">Assess</h4>
+        <p style="color:rgba(255,255,255,.7);">Appear for the standardised skill assessment by certified assessors</p>
+      </div>
+      <div class="step-card reveal d4" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">🏆</div>
+        <h4 style="color:var(--gold-light);">Certify</h4>
+        <p style="color:rgba(255,255,255,.7);">Receive your government-recognised certificate and launch your career</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm" style="background:var(--gold-pale);border-top:1px solid rgba(201,162,39,.2);">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="color:var(--blue-deep);margin-bottom:.8rem;">Start Your Skill Journey with <span style="color:var(--gold);">Saksham</span></h2>
+      <p style="color:var(--text-mid);max-width:480px;margin:0 auto 2rem;">Enrol in a government-certified skill development programme and take control of your professional future.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Enquire About Courses</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+        </a>
+        <p>Empowering students from grade 7 to 10 across all major boards through innovative teaching, holistic development, and the philosophy of continuous growth.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Academic Center</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+          <li><a href="vision.html">Vision &amp; Mission</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Saksham Courses</h5>
+        <ul>
+          <li><a href="#skills">Digital Literacy</a></li>
+          <li><a href="#skills">Accounts &amp; Tally</a></li>
+          <li><a href="#skills">Communication Skills</a></li>
+          <li><a href="#skills">Tailoring &amp; Fashion</a></li>
+          <li><a href="#skills">Beauty &amp; Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="contact.html">Inquiry Form</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+          <li><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="gold">Kaizen Academy</span>. Saksham Skill Development Center. Government Affiliated.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

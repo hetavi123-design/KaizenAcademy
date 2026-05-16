@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Mind Vista – Overseas Education Counselling</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.dest-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;box-shadow:0 2px 12px var(--shadow);transition:all .3s var(--ease);}
+.dest-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px var(--shadow-hover);}
+.dest-flag{font-size:2.5rem;margin-bottom:.7rem;}
+.dest-card h4{color:var(--blue-deep);margin-bottom:.3rem;}
+.dest-card p{font-size:.8rem;}
+.service-item{display:flex;gap:1.5rem;align-items:flex-start;padding:1.8rem;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:1.2rem;box-shadow:0 2px 10px var(--shadow);transition:all .3s var(--ease);}
+.service-item:hover{transform:translateX(6px);box-shadow:0 6px 24px var(--shadow-hover);}
+.service-num{width:48px;height:48px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;color:var(--blue-dark);flex-shrink:0;box-shadow:0 3px 12px var(--shadow-gold);}
+.service-item h4{color:var(--blue-deep);margin-bottom:.3rem;}
+.service-item p{font-size:.88rem;}
+.mv-hero-bg{background:linear-gradient(135deg,#071226 0%,#0d2b6b 45%,#1a0d4a 100%)!important;}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html" class="active">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg mv-hero-bg"></div>
+  <div class="hero-orb" style="width:550px;height:550px;top:-130px;right:-120px;background:radial-gradient(circle,rgba(90,70,200,.15) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:380px;height:380px;bottom:-90px;left:-90px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);animation-delay:3s;"></div>
+  <div class="geo-shape" style="width:260px;height:260px;top:18%;right:6%;animation-duration:38s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;">
+    <div class="hero-left" style="max-width:720px;">
+      <div class="hero-badge">🌍 Overseas Education Counselling</div>
+      <h1 class="hero-title">Mind <span class="gold-text">Vista</span> Counselling Center</h1>
+      <p class="hero-desc">Your trusted gateway to the world's finest universities. Mind Vista provides expert, personalised overseas education counselling — helping students navigate the journey from aspiration to admission with clarity and confidence.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-gold btn-lg">Our Services</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Book a Consultation →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT MIND VISTA -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="reveal">
+        <div class="section-label">About Mind Vista</div>
+        <div class="gold-divider"></div>
+        <h2 class="section-title">Charting Your <span class="accent">Global Education</span> Journey</h2>
+        <p style="color:var(--text-mid);margin-bottom:1.2rem;">
+          Mind Vista is Kaizen Academy's dedicated overseas education counselling center — a professional advisory service built to help students and families make informed, confident decisions about studying abroad.
+        </p>
+        <p style="color:var(--text-mid);margin-bottom:1.5rem;">
+          With an in-depth understanding of global university admission processes, visa procedures, scholarship opportunities and academic fit, our counsellors provide end-to-end guidance that transforms dreams into accepted offers.
+        </p>
+        <ul class="icon-list">
+          <li><span class="li-icon">✦</span> Personalised one-on-one counselling sessions</li>
+          <li><span class="li-icon">✦</span> University shortlisting based on profile &amp; aspirations</li>
+          <li><span class="li-icon">✦</span> Complete application &amp; essay support</li>
+          <li><span class="li-icon">✦</span> Scholarship &amp; financial aid guidance</li>
+          <li><span class="li-icon">✦</span> Visa documentation &amp; interview preparation</li>
+          <li><span class="li-icon">✦</span> Pre-departure orientation &amp; ongoing support</li>
+        </ul>
+      </div>
+      <div class="reveal d2" style="position:relative;">
+        <div style="background:linear-gradient(135deg,var(--blue-deep),#3d1a99);border-radius:var(--radius-xl);padding:3rem;color:white;text-align:center;">
+          <div style="font-size:4rem;margin-bottom:1rem;">🌐</div>
+          <h3 style="color:var(--gold-light);margin-bottom:.8rem;">Global Reach, Personal Touch</h3>
+          <p style="color:rgba(255,255,255,.72);font-size:.9rem;line-height:1.7;margin-bottom:1.8rem;">Every student is unique. Our counsellors take time to understand your academic background, career goals, budget and personality before recommending the perfect destination and programme.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">15+</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Countries Covered</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">200+</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Universities in Network</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">95%</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Admission Success Rate</div>
+            </div>
+            <div style="background:rgba(255,255,255,.08);border-radius:var(--radius);padding:1rem;">
+              <div style="font-size:1.8rem;font-weight:800;color:var(--gold-light);font-family:'Playfair Display',serif;">100%</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.6);">Personalised Guidance</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section bg-light" id="services">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Our Services</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">End-to-End <span class="accent">Admission Support</span></h2>
+      <p class="section-lead">From the first consultation to your first day on campus abroad — Mind Vista is with you every step of the way.</p>
+    </div>
+    <div class="feature-row" style="gap:3rem;align-items:start;">
+      <div>
+        <div class="service-item reveal">
+          <div class="service-num">1</div>
+          <div>
+            <h4>Career &amp; Profile Assessment</h4>
+            <p>We begin with a deep-dive into your academic strengths, interests, career aspirations, and financial considerations to build your unique student profile.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d1">
+          <div class="service-num">2</div>
+          <div>
+            <h4>University &amp; Country Shortlisting</h4>
+            <p>Based on your profile, we recommend a curated list of universities and programmes across target countries — balancing reach, match, and safety options.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d2">
+          <div class="service-num">3</div>
+          <div>
+            <h4>Test Preparation Guidance</h4>
+            <p>Expert advice on IELTS, TOEFL, SAT, GRE, GMAT and other standardised tests — including recommended study timelines and coaching resources.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d3">
+          <div class="service-num">4</div>
+          <div>
+            <h4>Application &amp; Essay Writing</h4>
+            <p>Step-by-step support for completing applications, crafting compelling personal statements, Statement of Purpose (SOP), and letters of recommendation strategy.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="service-item reveal">
+          <div class="service-num">5</div>
+          <div>
+            <h4>Scholarship &amp; Financial Aid</h4>
+            <p>Identifying scholarships, bursaries, and financial aid options available to Indian students — and guiding you through the application process to maximise funding.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d1">
+          <div class="service-num">6</div>
+          <div>
+            <h4>Visa Guidance &amp; Documentation</h4>
+            <p>Comprehensive guidance on student visa applications — including documentation checklists, financial requirement planning, and mock visa interview preparation.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d2">
+          <div class="service-num">7</div>
+          <div>
+            <h4>Accommodation &amp; Pre-Departure</h4>
+            <p>Guidance on finding safe, affordable student accommodation abroad, plus a pre-departure orientation covering banking, travel, culture and what to expect on arrival.</p>
+          </div>
+        </div>
+        <div class="service-item reveal d3">
+          <div class="service-num">8</div>
+          <div>
+            <h4>Post-Arrival Support</h4>
+            <p>Our support doesn't end at the airport. We stay connected to help students settle in, navigate challenges, and make the most of their international education experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">Study Destinations</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">The World is Your <span class="accent">Campus</span></h2>
+      <p class="section-lead">We guide students to leading universities across the globe's most sought-after study destinations.</p>
+    </div>
+    <div class="card-grid-4">
+      <div class="dest-card reveal d1"><div class="dest-flag">🇬🇧</div><h4>United Kingdom</h4><p>Oxford, Cambridge, Imperial, LSE &amp; more</p></div>
+      <div class="dest-card reveal d2"><div class="dest-flag">🇺🇸</div><h4>United States</h4><p>Ivy League, MIT, Stanford &amp; state universities</p></div>
+      <div class="dest-card reveal d3"><div class="dest-flag">🇨🇦</div><h4>Canada</h4><p>UofT, UBC, McGill &amp; top colleges</p></div>
+      <div class="dest-card reveal d4"><div class="dest-flag">🇦🇺</div><h4>Australia</h4><p>G8 universities, affordable tuition &amp; PR pathways</p></div>
+      <div class="dest-card reveal d1"><div class="dest-flag">🇩🇪</div><h4>Germany</h4><p>World-class STEM education, low to no tuition</p></div>
+      <div class="dest-card reveal d2"><div class="dest-flag">🇳🇿</div><h4>New Zealand</h4><p>Safe, scenic &amp; post-study work opportunities</p></div>
+      <div class="dest-card reveal d3"><div class="dest-flag">🇮🇪</div><h4>Ireland</h4><p>English-speaking EU gateway with tech hubs</p></div>
+      <div class="dest-card reveal d4"><div class="dest-flag">🇸🇬</div><h4>Singapore</h4><p>NUS, NTU &amp; Asia's academic powerhouse</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section bg-deep" style="padding:70px 0;">
+  <div class="container text-on-dark">
+    <div class="text-center reveal" style="margin-bottom:3rem;">
+      <div class="section-label">How It Works</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title" style="color:white;">Your Journey to <span class="accent">Study Abroad</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal d1" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">1</div>
+        <h4 style="color:var(--gold-light);">Free Consultation</h4>
+        <p style="color:rgba(255,255,255,.7);">Book a no-obligation session to discuss your goals and explore possibilities</p>
+      </div>
+      <div class="step-card reveal d2" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">2</div>
+        <h4 style="color:var(--gold-light);">Profile Building</h4>
+        <p style="color:rgba(255,255,255,.7);">We map your academics, interests and goals to the right opportunities</p>
+      </div>
+      <div class="step-card reveal d3" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">3</div>
+        <h4 style="color:var(--gold-light);">Application Support</h4>
+        <p style="color:rgba(255,255,255,.7);">Complete hand-holding through every application, essay and document</p>
+      </div>
+      <div class="step-card reveal d4" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);">
+        <div class="step-num">4</div>
+        <h4 style="color:var(--gold-light);">Fly &amp; Flourish</h4>
+        <p style="color:rgba(255,255,255,.7);">Visa support, pre-departure prep, and continued post-arrival assistance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-sm" style="background:var(--gold-pale);border-top:1px solid rgba(201,162,39,.2);">
+  <div class="container text-center">
+    <div class="reveal">
+      <h2 style="color:var(--blue-deep);margin-bottom:.8rem;">Ready to Study <span style="color:var(--gold);">Abroad?</span></h2>
+      <p style="color:var(--text-mid);max-width:480px;margin:0 auto 2rem;">Schedule your free consultation with a Mind Vista counsellor today and take the first step towards your global education.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="logo-mark">K</div>
+          <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+        </a>
+        <p>Empowering students from grade 7 to 10 across all major boards through innovative teaching, holistic development, and the philosophy of continuous growth.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="index.html">Academic Center</a></li>
+          <li><a href="activity.html">Activity Center</a></li>
+          <li><a href="mindvista.html">Mind Vista</a></li>
+          <li><a href="saksham.html">Saksham</a></li>
+          <li><a href="vision.html">Vision &amp; Mission</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Mind Vista</h5>
+        <ul>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="#services">University Shortlisting</a></li>
+          <li><a href="#services">Visa Guidance</a></li>
+          <li><a href="#services">Scholarship Help</a></li>
+          <li><a href="contact.html">Book Consultation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get in Touch</h5>
+        <ul>
+          <li><a href="contact.html">Inquiry Form</a></li>
+          <li><a href="tel:+919999999999">+91 99999 99999</a></li>
+          <li><a href="mailto:info@kaizenacademy.in">info@kaizenacademy.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="gold">Kaizen Academy</span>. Mind Vista Counselling Center. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
