@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Saksham Skill Development Center</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.skill-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:0 2px 12px var(--shadow);transition:all .35s var(--ease);position:relative;overflow:hidden;}
+.skill-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),var(--gold-light));transform:scaleY(0);transform-origin:bottom;transition:transform .35s var(--ease);}
+.skill-card:hover::before{transform:scaleY(1);}
+.skill-card:hover{transform:translateX(6px);box-shadow:0 10px 32px var(--shadow-hover);}
+.skill-icon{font-size:2rem;margin-bottom:1rem;}
+.skill-card h3{color:var(--blue-deep);margin-bottom:.5rem;font-size:1.05rem;}
+.skill-card p{font-size:.88rem;}
+.cert-tag{display:inline-block;background:linear-gradient(135deg,#1a6b2a,#2d9e40);color:white;border-radius:100px;padding:.2rem .7rem;font-size:.7rem;font-weight:700;letter-spacing:1px;margin-top:.8rem;}
+.govt-banner{background:linear-gradient(135deg,#0a3020,#1a6b2a);border-radius:var(--radius-lg);padding:2.5rem;color:white;text-align:center;position:relative;overflow:hidden;}
+.govt-banner::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border:1px solid rgba(255,255,255,.1);border-radius:50%;}
+.govt-banner::after{content:'';position:absolute;bottom:-60px;left:-60px;width:250px;height:250px;border:1px solid rgba(255,255,255,.08);border-radius:50%;}
+.benefit-item{display:flex;gap:.75rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--border);}
+.benefit-item:last-child{border-bottom:none;}
+.benefit-item .bi-icon{font-size:1.2rem;flex-shrink:0;margin-top:.05rem;}
+.benefit-item h4{font-size:.9rem;color:var(--blue-deep);margin-bottom:.1rem;font-family:'Poppins',sans-serif;}
+.benefit-item p{font-size:.83rem;}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html" class="active">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background:linear-gradient(135deg,#071226 0%,#0d3b20 50%,#1a6b2a 100%);"></div>
+  <div class="hero-orb" style="width:520px;height:520px;top:-120px;right:-110px;background:radial-gradient(circle,rgba(45,158,64,.15) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:360px;height:360px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);animation-delay:2.5s;"></div>
+  <div class="geo-shape" style="width:270px;height:270px;top:15%;right:7%;animation-duration:34s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;">
+    <div class="hero-left" style="max-width:740px;">
+      <div class="hero-badge">🏆 Government Affiliated Skill Development</div>
+      <h1 class="hero-title">Saksham <span class="gold-text">Skill Development</span> Center</h1>
+      <p class="hero-desc">Empowering individuals with job-ready skills and nationally recognised certifications. Saksham is affiliated with the Government of India's skill development mission — your gateway to meaningful employment and entrepreneurship.</p>
+      <div class="hero-actions">
+        <a href="#skills" class="btn btn-gold btn-lg">Explore Courses</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Enrol Today →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOVT AFFILIATION BANNER -->
+<section class="section-sm" style="background:var(--off-white);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="reveal">
+      <div class="govt-banner">
+        <div style="position:relative;z-index:2;">
+          <div style="font-size:3rem;margin-bottom:.8rem;">🇮🇳</div>
+          <h2 style="color:var(--gold-light);margin-bottom:.6rem;font-size:1.6rem;">Government Affiliated &amp; Certified</h2>
+          <p style="color:rgba(255,255,255,.75);max-width:600px;margin:0 auto 1.5rem;font-size:.95rem;">Saksham Skill Development Center operates under the umbrella of India's national skill development framework. Our certifications are nationally recognised and respected by employers across industries.</p>
+          <div style="display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:1rem 1.8rem;color:white;font-weight:700;font-size:.9rem;">
+            <span style="font-size:1.5rem;">✅</span>
+            Affiliated with Government of India Skill Development Initiative
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row">
+      <div class="reveal">
+        <div class="section-label">About Saksham</div>
+        <div class="gold-divider"></div>
