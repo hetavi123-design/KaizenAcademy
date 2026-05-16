@@ -58,7 +58,7 @@ p{font-size:0.97rem;color:var(--text-mid);}
 .navbar.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.4);}
 .nav-wrap{max-width:1280px;margin:0 auto;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;gap:1.5rem;}
 .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;}
-.logo-mark{width:70px;height:70px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--blue-dark);flex-shrink:0;box-shadow:0 2px 12px var(--shadow-gold);}
+.logo-mark{width:100px;height:100px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:var(--blue-dark);flex-shrink:0;box-shadow:0 2px 12px var(--shadow-gold);}
 .logo-text{line-height:1.15;}
 .logo-text .name{display:block;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--white);}
 .logo-text .tagline{display:block;font-size:.6rem;color:var(--gold-light);letter-spacing:2.5px;text-transform:uppercase;font-weight:500;}
