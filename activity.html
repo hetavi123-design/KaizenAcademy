@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kaizen Activity Center</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+.activity-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.2rem;box-shadow:0 4px 18px var(--shadow);transition:all .35s var(--ease);position:relative;overflow:hidden;text-align:center;}
+.activity-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--blue-deep),var(--blue-mid));opacity:0;transition:opacity .35s var(--ease);z-index:0;}
+.activity-card:hover::before{opacity:1;}
+.activity-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 50px var(--shadow-hover);}
+.activity-card>*{position:relative;z-index:1;}
+.activity-card:hover .act-icon-wrap{background:rgba(255,255,255,.15);}
+.activity-card:hover h3{color:var(--gold-light);}
+.activity-card:hover p{color:rgba(255,255,255,.8);}
+.activity-card:hover .act-tag{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border-color:rgba(255,255,255,.25);}
+.act-icon-wrap{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--blue-pale),var(--border));display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 1.3rem;transition:all .35s var(--ease);}
+.activity-card h3{color:var(--blue-deep);margin-bottom:.6rem;font-size:1.15rem;transition:color .35s var(--ease);}
+.activity-card p{font-size:.88rem;margin-bottom:1rem;transition:color .35s var(--ease);}
+.act-tag{display:inline-block;background:var(--gold-pale);border:1px solid rgba(201,162,39,.3);color:var(--gold);border-radius:100px;padding:.2rem .7rem;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:all .35s var(--ease);}
+.why-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;}
+@media(max-width:900px){.why-row{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.why-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-wrap">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-text"><span class="name">Kaizen Academy</span><span class="tagline">Excellence in Education</span></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Academic Center</a></li>
+      <li><a href="activity.html" class="active">Activity Center</a></li>
+      <li><a href="mindvista.html">Mind Vista</a></li>
+      <li><a href="saksham.html">Saksham</a></li>
+      <li><a href="vision.html">Vision &amp; Mission</a></li>
+      <li class="nav-cta"><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html">🎓 Academic Center</a>
+  <a href="activity.html">🎨 Activity Center</a>
+  <a href="mindvista.html">🌍 Mind Vista</a>
+  <a href="saksham.html">🏆 Saksham</a>
+  <a href="vision.html">⭐ Vision &amp; Mission</a>
+  <a href="contact.html">📞 Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" style="background:linear-gradient(135deg,#071226 0%,#0d3b5e 50%,#1a6b5e 100%);"></div>
+  <div class="hero-orb" style="width:500px;height:500px;top:-120px;right:-100px;background:radial-gradient(circle,rgba(45,196,171,.12) 0%,transparent 70%);"></div>
+  <div class="hero-orb" style="width:350px;height:350px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(201,162,39,.1) 0%,transparent 70%);animation-delay:2s;"></div>
+  <div class="geo-shape" style="width:280px;height:280px;top:15%;right:8%;animation-duration:36s;"></div>
+  <div class="particles"></div>
+  <div class="hero-content-wrap" style="grid-template-columns:1fr;">
+    <div class="hero-left" style="max-width:700px;">
+      <div class="hero-badge">🎨 Where Learning Meets Adventure</div>
+      <h1 class="hero-title">Kaizen <span class="gold-text">Activity Center</span></h1>
+      <p class="hero-desc">An energising space where kids discover hidden talents, develop life skills, and have a blast doing it. Our activity programmes are designed to make every child curious, creative, and confident.</p>
+      <div class="hero-actions">
+        <a href="#activities" class="btn btn-gold btn-lg">Explore Activities</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Join a Class →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-sm" style="background:var(--off-white);border-bottom:1px solid var(--border);">
+  <div class="container text-center">
+    <div class="reveal">
+      <p style="font-size:1.05rem;color:var(--text-mid);max-width:720px;margin:0 auto;">
+        The Kaizen Activity Center is more than an enrichment programme — it is a launchpad for young minds. We combine fun with purpose, helping children from grades 7–10 build mental agility, linguistic skills, mathematical brilliance, and scientific curiosity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES GRID -->
+<section class="section" id="activities">
+  <div class="container">
+    <div class="text-center reveal">
+      <div class="section-label">What We Offer</div>
+      <div class="gold-divider center"></div>
+      <h2 class="section-title">Seven Pathways to <span class="accent">Brilliant Minds</span></h2>
+      <p class="section-lead">Each programme is crafted by specialists to make learning engaging, effective, and genuinely enjoyable for every child.</p>
+    </div>
+    <div class="card-grid-3" style="margin-top:.5rem;">
+
+      <div class="activity-card reveal d1">
+        <div class="act-icon-wrap">🧠</div>
+        <h3>Memory Classes</h3>
+        <p>Scientifically-backed memory techniques including mind mapping, the Method of Loci, and spaced repetition — helping students retain more and stress less during exams.</p>
